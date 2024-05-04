@@ -3,7 +3,8 @@ import { catchError, interval, mergeMap, of } from 'rxjs';
 
 export default class MessagesController {
     constructor() {
-        this.url = 'http://localhost:7070/messages/unread';
+        // this.url = 'http://localhost:7070/messages/unread';
+        this.url = 'https://rxjs-backend.vercel.app/messages/unread';
         this.messages = document.querySelector('.messages');
         this.messages.addEventListener('click', MessagesController.onMessageClick);
     }
